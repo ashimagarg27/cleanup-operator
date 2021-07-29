@@ -1,0 +1,28 @@
+apiVersion: cleanup.ibm.com/v1
+kind: CleanUpOperator
+metadata:
+  name: cleanupoperator-sample
+  namespace: system
+spec:
+  # resourceName: "local-volume"
+  # namespace: "local-storage"
+  # version: "4.6"
+  # resources: 
+  #   - type: "deployment"
+  #     name: "local-storage-operator"
+  #     namespace: "local-storage"
+  #   - type: "localvolume"
+  #     name: "local-disk"
+  #     namespace: "local-storage"
+
+
+  resourceName: "trident"
+  namespace: "trident"
+  version: "20.07"
+  resources: 
+    - type: "deployment"
+      name: "trident-csi"
+      namespace: "trident"
+    - type: "deployment"
+      name: "trident-operator"
+      namespace: "trident"
